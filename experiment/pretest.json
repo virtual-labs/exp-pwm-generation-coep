@@ -1,39 +1,64 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+	"version": 2.0,
+	"questions": [{
+			"question": "Which programming language is commonly used to write programs for PIC microcontrollers?",
+			"answers": {
+				"a": "Python",
+				"b": "Java",
+				"c": "C/C++",
+				"d": "JavaScript"
+			},
+			"correctAnswer": "c",
+			"difficulty": "beginner"
+		},
+		{
+			"question": "Which microcontroller model was used in the experiment to generate the PWM signal for LED brightness control?",
+			"answers": {
+				"a": "PIC16F877A",
+				"b": "PIC18F4550",
+				"c": "Arduino Uno",
+				"d": "Raspberry Pi 3"
+			},
+			"correctAnswer": "b",
+			"difficulty": "beginner"
+		},
+		{
+			"question": "What does PWM stand for in the context of microcontrollers?",
+			"answers": {
+				"a": "Programmable Wide Modulation",
+				"b": "Pulse Width Modulation",
+				"c": "Power Wave Manipulation",
+				"d": "Programmable Waveform Modulation"
+			},
+			"correctAnswer": "b",
+			"difficulty": "beginner"
+		},
+
+
+		{
+			"question": "What is the purpose of generating a PWM signal in LED brightness control?",
+			"answers": {
+				"a": "To toggle the LED on and off rapidly",
+				"b": "To adjust the current flowing through the LED",
+				"c": "To synchronize the LED with other devices ",
+				"d": "To change the LED colour"
+			},
+			"correctAnswer": "b",
+			"difficulty": "beginner"
+		},
+
+		{
+			"question": "How is the LED brightness controlled using PWM?",
+			"answers": {
+				"a": "By varying the voltage applied to the LED",
+				"b": "By adjusting the frequency of the PWM signal",
+				"c": "By changing the duty cycle of the PWM signal",
+				"d": "By altering the LED's internal resistance"
+			},
+			"correctAnswer": "c",
+			"difficulty": "beginner"
+		}
+
+
+	]
 }

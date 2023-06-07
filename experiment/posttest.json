@@ -2,38 +2,133 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The Timer2 module in PIC18F4550 supports which of the following modes?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Timer mode only",
+        "b": "Counter mode only",
+        "c": "Both Timer and Counter modes",
+        "d": "PWM mode only"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+     
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which register is used to configure the Timer2 prescaler value in PIC18F4550?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "T2CON",
+        "b": "TMR2",
+        "c": "PR2",
+        "d": "T2CKPS"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the maximum value that can be loaded into the PR2 register for Timer2 in PIC18F4550? ",
+      "answers": {
+        "a": "255",
+        "b": "65535",
+        "c": "1023",
+        "d": "4095"
       },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Which pin(s) on the PIC18F4550 can be used to generate the PWM signal?",
+      "answers": {
+        "a": "RA0",
+        "b": "RB1",
+        "c": "RC2",
+        "d": "All of the above"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Which Timer2 mode allows for the generation of a PWM signal in PIC18F4550?",
+      "answers": {
+        "a": "Timer mode",
+        "b": "Counter mode",
+        "c": "Capture mode",
+        "d": "PWM mode"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "In PWM, the duty cycle represents:",
+      "answers": {
+        "a": "The time period of the PWM signal",
+        "b": "The voltage level applied to the LED",
+        "c": "The ratio of ON time to the total time period of the PWM signal",
+        "d": "The frequency of the PWM signal"
+      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the benefit of using PWM for LED brightness control compared to directly varying the voltage applied to the LED?",
+      "answers": {
+        "a": "PWM reduces power consumption",
+        "b": "PWM increases LED lifespan",
+        "c": "PWM provides smoother brightness control",
+        "d": "PWM eliminates the need for a microcontroller"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Can the brightness of an LED be controlled using PWM on any microcontroller?",
+      "answers": {
+        "a": "Yes, all microcontrollers support PWM.",
+        "b": "No, only specific microcontrollers have built-in PWM capability.",
+        "c": "Only with additional hardware components.",
+        "d": "It depends on the LED's specifications."
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "How can the duty cycle of a PWM signal be adjusted to control the LED brightness?",
+      "answers": {
+        "a": "By changing the frequency of the PWM signal",
+        "b": "By adjusting the voltage applied to the microcontroller ",
+        "c": "By modifying the program code",
+        "d": "By using external resistors"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What are the advantages of using a microcontroller-based approach for PWM LED brightness control?",
+      "answers": {
+        "a": "Flexibility in adjusting brightness levels",
+        "b": "Precise control over brightness changes",
+        "c": "Ability to integrate with other sensors or systems",
+        "d": "All of the above"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
     }
+	
   ]
 }
