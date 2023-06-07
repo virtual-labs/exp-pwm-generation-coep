@@ -1,0 +1,28 @@
+
+/home/runner/work/exp-pwm-generation-coep/exp-pwm-generation-coep/experiment/simulation/script.js
+    4:5   warning  'state_g' is assigned a value but never used  no-unused-vars
+   10:10  warning  'generateCode' is defined but never used      no-unused-vars
+   12:3   warning  'DT1' is not defined                          no-undef
+   15:18  warning  'DT1' is not defined                          no-undef
+   68:10  warning  'showcompilemsg' is defined but never used    no-unused-vars
+   76:26  warning  'event' is defined but never used             no-unused-vars
+   88:10  warning  'showSavedMessage' is defined but never used  no-unused-vars
+  105:26  warning  'event' is defined but never used             no-unused-vars
+  121:26  warning  'event' is defined but never used             no-unused-vars
+  212:10  warning  'reset' is defined but never used             no-unused-vars
+  213:5   warning  'Plotly' is not defined                       no-undef
+  214:5   warning  'Plotly' is not defined                       no-undef
+  216:11  warning  'time' is assigned a value but never used     no-unused-vars
+  229:3   warning  'Plotly' is not defined                       no-undef
+  230:3   warning  'Plotly' is not defined                       no-undef
+  232:12  warning  'start' is defined but never used             no-unused-vars
+  244:3   warning  'y2' is not defined                           no-undef
+  245:3   warning  'Plotly' is not defined                       no-undef
+  246:3   warning  'Plotly' is not defined                       no-undef
+  246:51  warning  'y2' is not defined                           no-undef
+  248:5   warning  'Plotly' is not defined                       no-undef
+  253:5   warning  'Plotly' is not defined                       no-undef
+  260:1   warning  'start_e' is not defined                      no-undef
+
+✖ 23 problems (0 errors, 23 warnings)
+
