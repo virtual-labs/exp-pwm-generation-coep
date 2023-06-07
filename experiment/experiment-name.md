@@ -1,1 +1,1 @@
-## Experiment name
+Write a program to control an LED brightness by generating a PWM signal on PIC18 series microcontroller
