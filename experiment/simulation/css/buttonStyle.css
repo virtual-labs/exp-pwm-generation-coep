@@ -1,0 +1,97 @@
+
+/* demo */
+.button1 {
+    background: linear-gradient(to right,red,orange);
+    transform: all 0.3s ease;
+}
+.button1:hover {
+    background: linear-gradient(to right, orange,red);
+}
+
+
+/* download btn */
+.button2 {
+    background: linear-gradient(to right,rgb(63, 162, 252),rgb(0, 0, 128));
+    transform: all 0.3s ease;
+}
+.button2:hover {
+    background: linear-gradient(to right, rgb(0, 0, 128), rgb(63, 162, 252));
+}
+
+/* refresh btn blue */
+.button3 {
+    background: linear-gradient(to right,rgb(7, 216, 233),rgb(2, 128, 181));
+    transform: all 0.3s ease;
+}
+.button3:hover {
+    background: linear-gradient(to right,rgb(2, 128, 181), rgb(7, 216, 233));
+}
+
+/* green Button css */
+.button4 {
+    background: linear-gradient(to right, #4afa39,#0c4d06);
+    transform: all 0.3s ease;
+}
+.button4:hover {
+    background: linear-gradient(to right, #0c4d06, #4afa39);
+}
+
+/* Redbutton css */
+.button5 {
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(125, 14, 4));
+    transform: all 0.3s ease;
+}
+
+.button5:hover {
+    background: linear-gradient(to right, rgb(125, 14, 4), rgb(255, 0, 0));
+}
+
+.strongMsgstyle{
+background-color:#ebe2d4;
+border-radius: 10px;
+padding:10px;
+ color: rgb(179, 0, 0);
+/*   animation-name: blinker; */
+ animation-duration:1s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+
+}
+
+.blink_textconfig {
+            animation: blinker 1.5s linear infinite;
+            color: #ff0000;
+            font-family: sans-serif;
+			font-weight: bold;
+			background: #ebe2d4;
+			padding: 7px 20px;
+			border-radius: 15px;
+        }
+ @keyframes blinker {
+            70% {
+                opacity: 0.2;
+            }
+  }
+ 
+ .textConfigNote{
+   color: #ff0000;
+   font-weight: bold;
+			background: #ebe2d4;
+			padding: 2px 5px;
+			border-radius: 15px;
+ }   
+ 
+     
+.blink_text {
+ animation-name: blinker;
+ animation-duration: 0.3s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+}
+
+@keyframes blinker {  
+ 0% { opacity: 1.0; }
+ 50% { opacity: 0.0; }
+ 100% { opacity: 1.0; }
+}
+        

@@ -2,566 +2,304 @@
 <html>
 
 <head>
-	<title>VIRTUAL LABS FOR MICROCONTROLLERS</title>
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #f2f2f2;
-			font-family: Arial, sans-serif;
-		}
+<title>Programming for PWM generation using on-chip Timers</title>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href=" https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="css/buttonStyle.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/mainPage.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/transducer.css">
+<link rel="stylesheet" href="css/toastr.min.css">
+<style type="text/css">
 
-		h1 {
-			margin-top: 20px;
-			margin-left: 20px;
-		}
 
-		.split-container {
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			border: 1px solid #ccc;
-			border: 1px solid black;
 
-		}
-
-		.split-container>div {
-			flex: 1;
-			height: 100%;
-			overflow-y: auto;
-			padding: 10px;
-		}
-
-		#sim-window {
-			height: 100%;
-			background-color: #ffffff;
-			text-align: center;
-			position: relative;
-		}
-
-		#code-window {
-			height: 100%;
-			background-color: #afafaf;
-			position: relative;
-			border: 1px solid black;
-		}
-
-		#code-header {
-			margin: 0;
-			padding: 10px;
-			background-color: #5353535d;
-			position: sticky;
-			top: 0;
-			z-index: 1;
-			border-radius: 5px;
-		}
-
-		#code-header h2 {
-			margin: 0;
-			font-size: 20px;
-		}
-
-		#code-buttons {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 10px;
-			background-color: #ccc;
-			position: relative;
-		}
-
-		#start,
-		#pause,
-		#reset,
-		#compile-btn,
-		#execute-btn,
-		#generate-btn,
-		#download-code-btn,
-		#download-op-btn {
-			margin-right: 10px;
-			padding: 10px;
-			background-color: #4CAF50;
-			border: none;
-			color: white;
-			cursor: pointer;
-			border-radius: 5px;
-		}
-
-		#reset{
-			background-color: #ce513b;
-		}
-
-		#download-code-btn {
-			background-color: #008CBA;
-		}
-
-		#download-op-btn {
-			background-color: #008CBA;
-		}
-
-		#code_1 {
-			width: 100%;
-			height: 310px;
-			resize: both;
-			font-family: monospace;
-			font-size: 16px;
-			border: none;
-			animation-name: slideInRight;
-			animation-duration: 1s;
-			border-radius: 5px;
-		}
-
-		#code {
-			position: relative;
-			width: 100%;
-			height: 25px;
-			resize: none;
-			font-family: monospace;
-			font-size: 16px;
-			border: none;
-			animation-name: slideInRight;
-			animation-duration: 1s;
-			border-radius: 5px;
-		}
-
-		#code_2 {
-			width: 100%;
-			height: 160px;
-			resize: both;
-			font-family: monospace;
-			font-size: 16px;
-			border: none;
-			animation-name: slideInRight;
-			animation-duration: 1s;
-			border-radius: 5px;
-
-		}
-
-		#code_log {
-			width: 90%;
-			height: 170px;
-			resize: both;
-			font-family: monospace;
-			font-size: 16px;
-			border: none;
-			color: rgb(255, 255, 255);
-			background-color: rgb(44, 44, 44);
-			border-radius: 5px;
-		}
-
-		#filename-input {
-			padding: 10px;
-			border-radius: 5px;
-			border: none;
-			margin-right: 10px;
-			width: 200px;
-		}
-
-		img {
-			width: auto;
-			height: auto;
-			max-width: 700px;
-			max-height: 500px;
-		}
-
-		#terminal {
-			color: rgb(255, 255, 255);
-			position: relative;
-			width: 100%;
-			height: 240px;
-			animation-name: slideInUp;
-			animation-duration: 1s;
-			background-color: rgb(44, 44, 44);
-			border-radius: 5px;
-		}
-
-		.line-numbers {
-			display: inline-block;
-			margin-right: 5px;
-			color: #aaa;
-			user-select: none;
-		}
-
-		@keyframes slideInRight {
-			from {
-				transform: translateX(100%);
-			}
-
-			to {
-				transform: translateX(0);
-			}
-		}
-
-		@keyframes slideInUp {
-			from {
-				transform: translateY(100%);
-			}
-
-			to {
-				transform: translateY(0);
-			}
-		}
-
-		.left {
-			font-size: 30px;
-			text-align: center;
-			font-family: Georgia, 'Times New Roman', Times, serif;
-			}
-
-		.right 
-		{
-			text-align: right;
-			}		
-	</style>
-
+</style>
 </head>
 
-<body>
-	
-	<div id="code-buttons">
-		<br><br>
-		<div class="left"><b>LED brightness by generating a PWM signal</b></div>
-		<div class="right">
-		<label for="PWMF">Enter PWM Frequency (in KHz)</label>
-		<input type="text" size="10" id="PWMF" placeholder="Enter in KHz">
-		<label for="DT">Enter Duty Cycle (in %)</label>
-		<input type="text" size="10" id="DT" placeholder="Enter in %">
-		<button id="generate-btn" onclick="generateCode()">Generate</button>
-		<button id="compile-btn" onclick="showcompilemsg()">Compile</button>
-		<button id="execute-btn" onclick="showSavedMessage()">Execute</button>
-		<button id="download-code-btn">Download Code</button>
-		<button id="download-op-btn">Download HEX</button>
-		</div>
-		<!-- <input type="text" id="filename-input" placeholder="Enter file name"> -->
+<body bgproperties="fixed">
 
+	<header>
+		<img class="Coeplogo" src='images/COEPlogo.png' /> 
+		<img class="VlabLogo" src='images/vlablogo.jpg' /> 
+		<span id="colgName">COEP TECHNOLOGICAL UNIVERSITY, PUNE</span>
+	</header>
+	
+	
+	<div  class="row container-fluid" id="main-div1" style="margin : 5px 1px"">
+	<div class="col-sm-9" id="buttonDiv">
 	</div>
-	  
-	
-	<div class="split-container">
+	<div class="col-sm-1" id="buttonDiv">
+	<button type="button" class="btn btn-info button3"  id="refresh" data-toggle="modal"><i class="fa fa-refresh"></i> <b>REFRESH</b></button>
+	</div>
+	<div class="col-sm-2" id="buttonDiv">
+	<button type="button" class="btn btn-danger button5" id="procedure" data-toggle="modal" data-target="#readProcedureModal"><b>READ PROCEDURE</b></button>
+	</div>
+	</div>
+	<div class="row container-fluid" style="margin-top: 5px" id="mainDiv">
 
-		<div id="sim-window">
-
-			<div>
-				<div id="code-header">
-					<h2>Simulation</h2>
+		<div class="col-lg-6" id="canvas">
+			<div class="panel panel-primary">
+				<div class="panel-heading " id="panelHeading2">
+					<center id="centerText1">DIAGRAM</center>
 				</div>
-				<img id="myImage" usemap="#image-map" src="images/exp_1_off.png">
-			</div>
-			<div id="terminal" >
-				<h2 style="text-align: left">Terminal</h2>
-				<textarea id="code_log" style="text-align: left"></textarea>
-			</div>
-		
-		</div>
-
-		<div id="code-window">
-			<div id="code-header">
-				<h2>Code Window</h2>
-			</div>
-			<textarea readonly id="code_1"></textarea>
-			<textarea readonly id="code"></textarea>
-			<textarea readonly id="code_2"></textarea>
-			<!-- <textarea id="code-textarea"></textarea> -->
-
-		</div>
-	</div>
-
-	<div class="split-container">
-		<div>
-			<h2 id="code-header"style="text-align: left">Scope 1</h2>
-		
-			<div id="plot1">
-				<button id="start" onclick="start()">Start</button>
-				<button id="pause" onclick="pause()">Pause</button>
+				<div class="panel-body" id="plot" hidden> 
+<!-- 				<button id="start" onclick="start()">Start</button> -->
+<!-- 				<button id="pause" onclick="pause()">Pause</button> -->
 <!-- 				<button id="reset" onclick="reset()">Reset</button> -->
+				</div>
+				<div class="panel-body" id="canvas-div1">
+				<img src="images/mainpageImg.png" style="width: 100%;height:100%"   class="img-fluid" ></img></div>
+				<div class="panel-body" id="canvas-div">
+				<div class="row">
+				<div class="col-lg-12">
+				
+				</div>
+				
+				</div>
+				
+				</div>
+				
 			</div>
 		</div>
-
-		<div>
-			<h2 id="code-header"style="text-align: left">Scope 2</h2>
-		
-			<div id="plot2">
+		<div class="col-lg-6" id="main-div">
+			<div class="panel panel-primary">
+				<div class="panel-heading " id="panelHeading1">
+					<center id="centerText2">BASIC KNOWLEDGE</center>
+				</div>
+				<div class="panel-body" id="main-div-conf">
+<!-- 				code will be rendered here -->
+				</div>
 			</div>
+
 		</div>
-		
-
-
 	</div>
+	
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">			
+				 <h4 class="modal-title" id="ModelTitle1">Message box</h4>
+				 <button type="button" class="close" data-dismiss="modal" style="color:#fff;">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p id="modelMsg"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" id = "nextPage" data-dismiss="modal" >Okay</button>
+			</div>
+		</div>
+	</div>
+</div>	
 
-	<div class="drag-handle"></div>
+<!-- procedure -->
 
-<!-- 	<script src="script.js"></script> -->
-<script>
-var interval = 1000;
-var PR_V = 0;
-var state_c = 0;
-var state_g = 0;
-var state_e = 0;
-var state_p=0;
-var duty_cycle = 0;
-var PWM1 = 0;
+<div id="readProcedureModal" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg">
 
-function generateCode() {
-  PWM1 = document.getElementById("PWMF").value;
-  DT1 = document.getElementById("DT").value;
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><center><b>PROCEDURE</b></center></h4>
+      </div>
+      <div class="modal-body">
+    
+<center id="modelTitle"><b>Configuration</b></center>
+ <ol>
+<li>Select Output Pin.</li>
+<li>Select PWM Period value (mS).</li>
+<li>Select Duty Cycle (10% - 100%).</li>
+<li>Select LED Configuration.</li>
+<li>Click on "GENERATE CODE" button to generate code.</li>
+<li>Click on "COMPILE" button to compile code.</li>
+<li>Click on "EXECUTE" button to execute code and goto mimic.</li>
+<li>If you want to download code click on "DOWNLOAD" button.</li>
+<li>The MIMIC will open on left side of screen.</li>
+</ol>
 
-  PR_V = (2000/PWM1) - 1;
-  duty_cycle = ((DT1/100)*(PR_V+1)-1);
+<center id="modelTitle"><b>Mimic</b></center>
+<ol>
+<li>Click on selected output pin terminal(red circle) and click on anode terminal(red circle) for connection of the selected output pin to anode. OR click on anode terminal(red circle) and click on selected output pin terminal(red circle) for connect the anode to selected output pin.</li>
+<li>Click on cathode terminal(red circle) and click on resistor terminal(red circle) for connection of cathode to resister. OR click on resistor terminal(red circle) and click on cathode terminal(red circle) for connection of resister to cathode.</li>
+<li>Click on "Check Connection" button.</li>
+<li>If you see alert like "Wrong Connection. Please Try Again." click on "Reset Connection" button and follow step 1,2 and 3.</li>
+<li>If you see alert like "Connection Established Successfully. Now Click on Run Button." Click on "Run" button.</li>
+<li>Output LED is on. now observe the square wave graph.</li>
+<li>Click on "REFRESH" button. to Re-executing the experiment.</li>
+</ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
 
-  var code_1 = "#include <pic18fregs.h>\n#include <delay.h>\n\n";
-  code_1 += "#pragma config XINST=OFF\n#pragma config FOSC = INTOSCIO_EC\n#pragma config WDT = OFF\n#pragma config LVP = OFF\n\n";
-  code_1 += "void delay(unsigned int val);\n\n";
-  code_1 += "void main(void)\n{\n";
-  code_1 += "    OSCCON=0x72;         /* set internal clock to 8MHz */\n";
-  code_1 += "    TRISCbits.TRISC2=0;  /* Set CCP1 pin as output for PWM out */\n";
-  code_1 += "    PR2 = "+ PR_V+ ";\n";
-  code_1 += "    CCPR1L = 1;   /* load duty cycle */\n    T2CON=0;             /* no pre-scalar*/\n";
-  code_1 += "    CCP1CON=0x0C;        /* set PWM mode*/\n    TMR2=0;\n";
-  code_1 += "    T2CONbits.TMR2ON=1;  /* Turn ON Timer2 */\n";
-  code_1 += "    while(1)\n    {\n";
-  var code = "        CCPR1L =" + duty_cycle + ";   /* load duty cycle */"
-  var code_2 = "    }\n"
-  code_2 += "}\n"
-  code_2 += "\n"
-  code_2 += "void delay(unsigned int val)\n{\n"
-  code_2 += "     unsigned int i,j;\n";
-  code_2 += "        for(i=0;i<=val;i++)\n            for(j=0;j<165;j++);      /*This count Provide delay of 1 ms for 8MHz Frequency */\n"
-  code_2 += "}"
-
-  document.getElementById("code_1").value = code_1;
-  document.getElementById("code").value = code;
-  document.getElementById("code_2").value = code_2;
-  alert("Code generated successfully!");
-  state_g =1;
-}
-
-document.getElementById("compile-btn").addEventListener("click", async () => {
-  let filename = (document.getElementById("code_1").value + document.getElementById("code").value + document.getElementById("code_2").value) || "experiment_2";
-  const response = await fetch("http://192.168.1.45:8081/compile3", {
-    method: "POST",
-    headers: {
-      'Access-Control-Allow-Headers': '*',
-      'Content-Type': 'application/text'
-    },
-    body: filename,
-  });
-  if (!response.ok) {
-    const errorMessage = await response.text();
-    console.error(errorMessage);
-    alert("code has errors");
-    return;
-  }
-  var hexFilePath = await response.text();
-  document.getElementById("code_log").value = hexFilePath;
-  console.log(hexFilePath);
-  pause();
-  state_c = 1;
-  // display hex file path on the webpage
-});
-
-function showcompilemsg() {
-    alert("Check Terminal Window below Simulation for errors")
-}
-
-document.getElementById("execute-btn").addEventListener("click", async () => {
-  var req = new XMLHttpRequest();
-  req.open("GET", "http://192.168.1.45:8081/execute3", true);
-  req.responseType = "";
-  req.onload = function (event) {
-    if (req.status != 200) return;
-    var blob = JSON.parse(req.responseText);
-    duty_cycle = blob;
-  }
-  req.send();
-  pause();
-  state_e =1;
-  state_p=0;
-  // document.write(delayy);
-});
-
-function showSavedMessage() {
-  if (state_c == 1)
-  {
-    alert("Clock has been set");
-    state_c = 0;
-  }
-  else
-  {
-    alert("Please compile the code first");
-  }
-}
+  </div>
+</div>
 
 
-document.getElementById("download-code-btn").addEventListener("click", async () => {
-  var req = new XMLHttpRequest();
-  req.open("GET", "http://192.168.1.45:8081/download3", true);
-  req.responseType = "blob";
-  req.onload = function (event) {
-    if (req.status != 200) return;
-    var blob = req.response;
-    var fileName = "exp_3_code.c" //if you have the fileName header available
-    var link = document.createElement('a');
-    link.href = window.URL.createObjectURL(blob);
-    link.download = fileName;
-    link.click();
-  };
-  req.send();
-});
 
-document.getElementById("download-op-btn").addEventListener("click", async () => {
-  var req = new XMLHttpRequest();
-  req.open("GET", "http://192.168.1.45:8081/HEX3", true);
-  req.responseType = "blob";
-  req.onload = function (event) {
-    if (req.status != 200) return;
-    var blob = req.response;
-    var fileName = "exp_3_code.hex" //if you have the fileName header available
-    var link = document.createElement('a');
-    link.href = window.URL.createObjectURL(blob);
-    link.download = fileName;
-    link.click();
-  };
-  req.send();
-});
+<script>	
+	var clk_hex = "0x00";
+	var state_p=0;
+		var data = [{
+	  x: [],
+	  y: [],
+	  mode: 'lines',
+	  line: {
+	    color: '#80CAF6'
+	  }
+	}];
 
-
-var images = [
-  "images/exp_1_off.png",
-  "images/exp_1_on.png"
-];
-
-var currentImage = 0;
-var intervalId;
-function updateImage() {
-  var img = document.getElementById("myImage");
-  img.src = images[currentImage];
-  currentImage++;
-  if (currentImage >= images.length) {
-    currentImage = 0;
-  }
-}
-
-function startImage() {
-  updateImage();
-  intervalId = setInterval(updateImage,interval);
-}
-
-function stopImage() {
-  var img = document.getElementById("myImage");
-  img.src = "images/exp_1_off.png";
-  currentImage = 0;
-  clearInterval(intervalId);
-}
-
-var data1 = [{
-  x: [],
-  y: [],
-  mode: 'lines',
-  line: {
-    color: '#80CAF6'
-  }
-}];
-
-var layout1 = {
+var layout = {
   responsive: true,
-  width: 900,
+  width: 670,
   height: 300,
-  title: 'Voltages in Real Time',
+  title: 'CCPR2 Timer',
   xaxis: {
     range: [0, 10],
-    title: 'Time (in ms)'
+    title: 'Time (mS)'
   },
   yaxis: {
-    range: [-0.2, 6.0],
-    title: 'Pulse Volatge (in V)'
+    range: [-0.2, 6.4],
+    title: 'Volatge (in V)'
   }
 };
 
-var data2 = [{
-  x: [],
-  y: [],
-  mode: 'lines',
-  line: {
-    color: '#80CAF6'
-  }
-}];
+interval_plot = 0.01;
+offTime = 0.02;
+onTime = 0.03+offTime;
 
-var layout2 = {
-  responsive: true,
-  width: 900,
-  height: 300,
-  title: 'Average PWM Output',
-  xaxis: {
-    range: [0, 10],
-    title: 'Time (in ms)'
-  },
-  yaxis: {
-    range: [-0.2, 6.0],
-    title: 'Pulse Volatge (in V)'
-  }
-};
-
-var interval_plot;
 var time = 0;
-function reset() {
-    Plotly.deleteTraces('plot1',0);
-    Plotly.deleteTraces('plot2',0);
-      // Plotly.newPlot('plot', [],[]);
-      var time = 0;
-      state_p=1;
-      
-      stopImage();
-  } 
-function pause(){
-  stopImage();
-  clearInterval(interval_plot);
-}
 
 var dt = 0.01;
 var y = 1;
 state_p=0;
-  Plotly.newPlot('plot1', data1, layout1);
-  Plotly.newPlot('plot2', data2, layout2);
+  Plotly.newPlot('plot', data, layout);
+  var interval_plot;
+  function start(interval_plot1,offTime1,onTime1){
+	 interval_plot = interval_plot1;
+	  offTime = offTime1;
+	  onTime = onTime1+offTime;
+  time = 0; y = 0, dt = 0.01;
+  data = [{
+  x: [],
+  y: [],
+  mode: 'lines',
+  line: {
+    color: '#80CAF6'
+  }
+}];
 
-  function start(){
-    if(state_e == 1 && state_p==0){
-  startImage();
+var layout = {
+  responsive: true,
+  width: 670,
+  height: 300,
+  title: 'CCPR2 Timer',
+  xaxis: {
+    range: [0, 10],
+    title: 'Time (mS)'
+  },
+  yaxis: {
+    range: [-0.2, 6.4],
+    title: 'Volatge (in V)'
+  }
+};
+ 
+// var LedImg1=paper.image("images/offDiode.png", 285, 95, 0, 0);
+// var  LedImg2=paper.image("images/onDiodePreview.png", 285, 95, 0, 0);
+  Plotly.newPlot('plot', data, layout);
    interval_plot = setInterval(function() {
   time += dt;
-  if (time % 1 < (1)*((duty_cycle+1)/(PR_V+1))) {
-    y = 5;
-
-  } else {
-    
+//   console.log(time);
+  if (time % (onTime) < (offTime)) {
     y = 0;
+//     LedImg2.remove();
+    LedImg1=paper.image("images/offDiode.png", 285, 95, 85, 85);
+  } else {    
+    y = 5;
+//     LedImg1.remove();
+    LedImg2=paper.image("images/onDiodefinalPreview.png", 285, 95, 85, 85);
+//     Ledcircle.attr({ fill:'red'});
   }
-  y2 = 5 * ((duty_cycle+1)/(PR_V+1));
-  Plotly.extendTraces('plot1', {x: [[time]], y: [[y]]}, [0]);
-  Plotly.extendTraces('plot2', {x: [[time]], y: [[y2]]}, [0]);
+  Plotly.extendTraces('plot', {x: [[time]], y: [[y]]}, [0]);
   if (time > 10) {
-    Plotly.relayout('plot1', {
+    Plotly.relayout('plot', {
       xaxis: {
-        range: [time-10, time]
-      }
-    });
-    Plotly.relayout('plot2', {
-      xaxis: {
-        range: [time-10, time]
+        range: [time-10, time],
+		title: 'Time (mS)'
       }
     });
   }
-}, dt*1000);
+}, dt*100);
 start_e =0;
-}
-else{
-  alert("Please excute the code in simulation")
-}
-}
 
-
+}
+	
+  function reset() {
+		clearInterval(time);
+		clearInterval(interval_plot);
+	    Plotly.deleteTraces('plot',0);	 
+	      var time = 0;
+	      state_p=1;
+	      
+	  } 
+	function pause(){
+	  clearInterval(interval_plot);
+	}
 
 </script>
+
+
+	
+	<footer> Copyrights &copy; COEP - Virtual Lab </footer>
 </body>
 
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script type="text/javascript" src="lib/raphael.js"></script>
+<script type="text/javascript" src="lib/raphael.min.js"></script>
+<scrip src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript" src="src/configuration.js"></script>
+<!-- <script type="text/javascript" src="src/codeGenerate.js"></script> -->
+<script type="text/javascript" src="src/mimic.js"></script>
+<script type="text/javascript" src="src/toastr.min.js"></script>
+
+<script>
+    toastr.options = {
+        'closeButton': true,
+        'debug': false,
+        'newestOnTop': false,
+        'progressBar': false,
+        'positionClass': 'toast-top-right',
+        'preventDuplicates': false,
+        'showDuration': '1000',
+        'hideDuration': '1000',
+        'timeOut': '500',
+        'extendedTimeOut': '500',
+        'showEasing': 'swing',
+        'hideEasing': 'linear',
+        'showMethod': 'fadeIn',
+        'hideMethod': 'fadeOut',
+    }
+</script>
+<script>
+    document.getElementById('refresh').addEventListener('click', function() {
+        location.reload();
+    });
+</script>
 </html>
