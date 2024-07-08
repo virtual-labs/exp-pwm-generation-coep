@@ -35,14 +35,14 @@
 ![1](images/figure1.PNG)
 
 
-![2](images/figute2.PNG)
+![2](images/figure2.PNG)
 
 ##### 3.1 PWM Period and Duty Cycle 
 
 The PWM period T is determined by the interaction of the PR2 register and the eight 
 bits of Timer 2. It may be calculated as follows: 
 
-![image](images/figute10.png)
+![image](images/figure10.png)
 
 Where, <br/>
 Timer 2 input Clock = 4 \* Tosc \* TMR2 Prescaler value <br/>
@@ -58,7 +58,7 @@ Hence, <br/>
 	**Ton = (CCPR1L: CCP1CON<5:4>) x (Tosc \* TMR2 Prescaler value)**  <br/>
 Note that there is not here a factor of four with the Tosc term, as we are using 10-bits of Timer 2. Rearranging the above equation, to find value of pulse width register (CCPR1L: CCP1CON <5:4>).
 
-![image](images/figute11.png)
+![image](images/figure11.png)
  
 ##### 3.2 Pin Description
 
@@ -150,22 +150,22 @@ In normal operation, TMR2 is incremented from 00h on each clock (FOSC/4). A 2-bi
 
 Therefore,
 
-![image](images/figute12.png)
+![image](images/figure12.png)
 
-![4](images/figute4.PNG)
+![4](images/figure4.PNG)
 
 
 **b. For Fosc = 48 MHz**
 
-![image](images/figute13.png)
+![image](images/figure13.png)
 
 
-![5](images/figute5.PNG)
+![5](images/figure5.PNG)
 
 #### 6. Quadruple half H Drivers (L293D) 
 
  The L293D is quadruple high-current half-H drivers. The L293D is designed to provide bidirectional drive currents of up to 600-mA at voltages from 4.5 V to 36 V. The device is designed to drive inductive loads such as relays, solenoids, dc and bipolar stepping motors, as well as other high-current/high-voltage loads in positive-supply applications. All inputs are TTL compatible. Each output is a complete totem-pole drive circuit, with a Darlington transistor sink and a pseudo-Darlington source. 
  <br/> Drivers are enabled in pairs, with drivers 1 and 2 enabled by 1,2EN and drivers 3 and 4 enabled by 3,4EN as shown in pin diagram and function table. When an enable input is high, the associated drivers are enabled, and their outputs are active and in phase with their inputs. When the enable input is low, those drivers are disabled, and their outputs are off and in the high-impedance state. With the proper data inputs, each pair of drivers forms a full-H (or bridge) reversible drive suitable for solenoid or motor applications. 
 
-![6](images/figute6.PNG)
+![6](images/figure6.PNG)
 
