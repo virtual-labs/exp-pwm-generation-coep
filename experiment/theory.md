@@ -32,10 +32,10 @@
   <br/> The simplified block diagram of the CCP1 configured to generate PWM is shown in Figure 1. with example waveforms in Figure 2. The block diagram for CCP2 is similar to CCP1. It can be seen that Figure 1. contains CCPR1L, Timer 2, comparator and the PR2 register working together. Although not shown, Timer 2 is still driven from the on-chip oscillator, through its own prescaler. The comparator output drives an R–S flip-flop. When the value in PR2 equals Timer 2, then the comparator clears the timer and sets the flip-flop, whose output goes high. This is seen in Figure 2. This action sets the PWM period.
  <br/> Having established the PWM period, let us consider how the pulse width is determined. A second Compare register arrangement is introduced to do this. This is made up of the CCPR1H register, plus a second comparator. As the logic of the diagram shows, every time this comparator finds equal input values, it resets the output flip-flop, clearing the output to zero. It is this comparator that determines the pulse width. Again, this is shown in Figure 2. To change the pulse width, the programmer writes to the CCPR1L register, which acts as a buffer. Its value is transferred to CCPR1H only when a PWM cycle is complete, to avoid output errors in the process. The block diagram is made more complex because three of the registers are ‘stretched’, to make them potentially 10-bit instead of 8-bit. This increases the resolution. CCPR1L uses two bits of the CCP1CON register. CCPR1H is extended with an internal 2-bit latch, while the extension to Timer 2 is as described in Note 1 of Figure 1. Because of these two extra bits, in its 10-bit version it is effectively clocked direct from the internal oscillator signal, undivided. If the prescaler is used, then it acts on this frequency, not the usual Fosc/4. Notice, however, that the PR2 register remains at eight bits. This means that the PWM period has only an 8-bit equivalent resolution.
 
-![1](images/figure1.png)
+![1](images/figure1.PNG)
 
 
-![2](images/figute2.png)
+![2](images/figute2.PNG)
 
 ##### 3.1 PWM Period and Duty Cycle 
 
@@ -125,7 +125,7 @@ The Timer2 module timer incorporates the following features:
 The module is controlled through the T2CON register which enables or disables the timer and configures the prescaler and Postscaler. Timer2 can be shut off by clearing control bit, TMR2ON (T2CON<2>), to minimize power consumption. 
 A simplified block diagram of the module is shown in Figure 3.
 
-![3](images/figure3.png)
+![3](images/figure3.PNG)
 
 ##### 4.1 Timer2 Operation 
 
@@ -152,7 +152,7 @@ Therefore,
 
 ![image](images/figute12.png)
 
-![4](images/figute4.png)
+![4](images/figute4.PNG)
 
 
 **b. For Fosc = 48 MHz**
@@ -160,12 +160,12 @@ Therefore,
 ![image](images/figute13.png)
 
 
-![5](images/figute5.png)
+![5](images/figute5.PNG)
 
 #### 6. Quadruple half H Drivers (L293D) 
 
  The L293D is quadruple high-current half-H drivers. The L293D is designed to provide bidirectional drive currents of up to 600-mA at voltages from 4.5 V to 36 V. The device is designed to drive inductive loads such as relays, solenoids, dc and bipolar stepping motors, as well as other high-current/high-voltage loads in positive-supply applications. All inputs are TTL compatible. Each output is a complete totem-pole drive circuit, with a Darlington transistor sink and a pseudo-Darlington source. 
  <br/> Drivers are enabled in pairs, with drivers 1 and 2 enabled by 1,2EN and drivers 3 and 4 enabled by 3,4EN as shown in pin diagram and function table. When an enable input is high, the associated drivers are enabled, and their outputs are active and in phase with their inputs. When the enable input is low, those drivers are disabled, and their outputs are off and in the high-impedance state. With the proper data inputs, each pair of drivers forms a full-H (or bridge) reversible drive suitable for solenoid or motor applications. 
 
-![6](images/figute6.png)
+![6](images/figute6.PNG)
 
