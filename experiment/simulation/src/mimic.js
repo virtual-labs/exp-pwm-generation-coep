@@ -54,26 +54,31 @@ var x=100;
 var y=160;	
 
 var pinVal=3;
-var periodTimerValue1=parseInt(pValSelect);	
-var cycleValue1=parseInt(dValSelect);				
+var periodTimerValue2=parseInt(pValSelect);
+var periodTimerValue1=periodTimerValue2/1000;
+var cycleValue1=parseInt(dValSelect);		
+//console.log(periodTimerValue1+"......"+cycleValue1);
+		
 
 var remaingpercentVal=100-cycleValue1;
 var remaincalculate1=remaingpercentVal/100;
-console.log("remaincalculate1 = "+remaincalculate1);
+//console.log("remaincalculate1 = "+remaincalculate1);
 
 var calculate1=cycleValue1/100;
-console.log("calculate1 = "+calculate1);
+//console.log("calculate1 = "+calculate1);
 
 var addpercent=remaincalculate1+calculate1;
-console.log("addpercent = "+addpercent);
+//console.log("addpercent = "+addpercent);
 
 
 var calculate2Ans=calculate1*periodTimerValue1;
-console.log("calculate2Ans = "+calculate2Ans);
+//console.log("calculate2Ans = "+calculate2Ans);
 
 var interval_plot1=periodTimerValue1;
-var offTime1=calculate1;
-var onTime1= remaincalculate1;
+var onTime1=(periodTimerValue1*(cycleValue1/100));
+//remaincalculate1;
+var offTime1= periodTimerValue1-onTime1;
+//calculate1;
 var onTime11=onTime1+offTime1;
 
 var checkStatus=paper.image("images/checkBtn1.png",x-90,y-150,200, 50);
@@ -82,7 +87,7 @@ var runimg=paper.image("images/runPreview.png",x+120,y-150,110, 50);
 var microcontroller=paper.image("images/chipImg.png",x-40,y+40,400, 300).rotate(1);
 
 var Ledcircle=paper.circle(x+228, y-21, 35);
-
+var inputpinName=0;
 
 var diodSelection=1;
 //Math.floor(Math.random() * 2);
@@ -137,7 +142,7 @@ var crossCheckConnect=false;
 var cathodFlag=0;
 cathode.click(function(){
 	cathodFlag=1;
-	console.log("cathodFlag"+cathodFlag);
+//	console.log("cathodFlag"+cathodFlag);
 	var cathode_connection_arr=[];	
 	if(verifyRcircleConnect==true){
 		alert("Already Connected.");
@@ -298,7 +303,7 @@ runimg.click(function(){
 //		setInterval(toggleVisibility, timeVal*2);
 //		$("#plot").html("");
 		$("#graphDiv").prop("hidden",false);
-		start(interval_plot1,onTime1,offTime1,);
+		start(interval_plot1,offTime1,onTime1);
 //		start();
 		
 	}else{
