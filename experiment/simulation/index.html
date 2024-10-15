@@ -158,6 +158,12 @@
 	  }
 	}];
 
+var config = {
+    showLink: false,
+    displayModeBar: false,
+    modeBarButtonsToRemove: ['toImage']
+};
+
 var layout = {
   responsive: true,
   width: 670,
@@ -182,7 +188,7 @@ var time = 0;
 var dt = 0.01;
 var y = 1;
 state_p=0;
-  Plotly.newPlot('plot', data, layout);
+  Plotly.newPlot('plot', data, layout, config);
   var interval_plot;
   function start(interval_plot1,offTime1,onTime1){
 	 interval_plot = interval_plot1;
@@ -197,6 +203,12 @@ state_p=0;
     color: '#80CAF6'
   }
 }];
+
+var config = {
+    showLink: false,
+    displayModeBar: false,
+    modeBarButtonsToRemove: ['toImage']
+};
 
 var layout = {
   responsive: true,
@@ -215,7 +227,7 @@ var layout = {
  
 // var LedImg1=paper.image("images/offDiode.png", 285, 95, 0, 0);
 // var  LedImg2=paper.image("images/onDiodePreview.png", 285, 95, 0, 0);
-  Plotly.newPlot('plot', data, layout);
+  Plotly.newPlot('plot', data, layout, config);
    interval_plot = setInterval(function() {
   time += dt;
 //   console.log(time);

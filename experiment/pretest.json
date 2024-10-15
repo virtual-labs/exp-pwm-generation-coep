@@ -1,7 +1,7 @@
 {
 	"version": 2.0,
 	"questions": [{
-			"question": "Which programming language is commonly used to write programs for PIC microcontrollers?",
+			"question": "1) Which programming language is commonly used to write programs for PIC microcontrollers?",
 			"answers": {
 				"a": "Python",
 				"b": "Java",
@@ -12,7 +12,7 @@
 			"difficulty": "beginner"
 		},
 		{
-			"question": "Which microcontroller model was used in the experiment to generate the PWM signal for LED brightness control?",
+			"question": "2) Which microcontroller model was used in the experiment to generate the PWM signal for LED brightness control?",
 			"answers": {
 				"a": "PIC16F877A",
 				"b": "PIC18F4550",
@@ -23,7 +23,7 @@
 			"difficulty": "beginner"
 		},
 		{
-			"question": "What does PWM stand for in the context of microcontrollers?",
+			"question": "3) What does PWM stand for in the context of microcontrollers?",
 			"answers": {
 				"a": "Programmable Wide Modulation",
 				"b": "Pulse Width Modulation",
@@ -36,7 +36,7 @@
 
 
 		{
-			"question": "What is the purpose of generating a PWM signal in LED brightness control?",
+			"question": "4) What is the purpose of generating a PWM signal in LED brightness control?",
 			"answers": {
 				"a": "To toggle the LED on and off rapidly",
 				"b": "To adjust the current flowing through the LED",
@@ -48,7 +48,7 @@
 		},
 
 		{
-			"question": "How is the LED brightness controlled using PWM?",
+			"question": "5) How is the LED brightness controlled using PWM?",
 			"answers": {
 				"a": "By varying the voltage applied to the LED",
 				"b": "By adjusting the frequency of the PWM signal",
