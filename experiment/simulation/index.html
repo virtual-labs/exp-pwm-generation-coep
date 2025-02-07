@@ -18,13 +18,27 @@
 <link rel="stylesheet" href="css/transducer.css">
 <link rel="stylesheet" href="css/toastr.min.css">
 <style type="text/css">
+	#body {			  
+		  overflow-x: hidden;
+	}
+	#start, #pause, #reset {
+				margin-right: 2px;
+				padding: 2px;
+				background-color: #4CAF50;
+				border: none;
+				color: white;
+				cursor: pointer;
+				border-radius: 5px;
+			}
 
-
+			#reset{
+				background-color: #ce513b;
+			}
 
 </style>
 </head>
 
-<body bgproperties="fixed">
+<body id="body" bgproperties="fixed">
 
 	<header>
 		<img class="Coeplogo" src='images/COEPlogo.png' /> 
@@ -43,7 +57,7 @@
 	<button type="button" class="btn btn-danger button5" id="procedure" data-toggle="modal" data-target="#readProcedureModal"><b>READ PROCEDURE</b></button>
 	</div>
 	</div>
-	<div class="row container-fluid" style="margin-top: 5px" id="mainDiv">
+	<div class="row container-fluid" style="margin-top: -20px" id="mainDiv">
 
 		<div class="col-lg-6" id="canvas">
 			<div class="panel panel-primary">
@@ -115,7 +129,7 @@
 <center id="modelTitle"><b>Configuration</b></center>
  <ol>
 <li>Select Output Pin.</li>
-<li>Select PWM Period value (mS).</li>
+<li>Select PWM Period value (ms).</li>
 <li>Select Duty Cycle (10% - 100%).</li>
 <li>Select LED Configuration.</li>
 <li>Click on "GENERATE CODE" button to generate code.</li>
@@ -127,13 +141,13 @@
 
 <center id="modelTitle"><b>Mimic</b></center>
 <ol>
-<li>Click on selected output pin terminal(red circle) and click on anode terminal(red circle) for connection of the selected output pin to anode. OR click on anode terminal(red circle) and click on selected output pin terminal(red circle) for connect the anode to selected output pin.</li>
-<li>Click on cathode terminal(red circle) and click on resistor terminal(red circle) for connection of cathode to resister. OR click on resistor terminal(red circle) and click on cathode terminal(red circle) for connection of resister to cathode.</li>
+<li>Click on selected output pin terminal(red circle) and click on anode terminal(red circle) for connection of the selected output pin to anode or vice versa.</li>
+<li>Click on cathode terminal(red circle) and click on resistor terminal(red circle) for connection of cathode to resister or vice versa.</li>
 <li>Click on "Check Connection" button.</li>
-<li>If you see alert like "Wrong Connection. Please Try Again." click on "Reset Connection" button and follow step 1,2 and 3.</li>
-<li>If you see alert like "Connection Established Successfully. Now Click on Run Button." Click on "Run" button.</li>
-<li>Output LED is on. now observe the square wave graph.</li>
-<li>Click on "REFRESH" button. to Re-executing the experiment.</li>
+<li>If connection is wrong, click on "Reset Connection" button and follow steps 1, 2 and 3.</li>
+<li>If connection is successful, click on "Run" Button.</li>
+<li>Output LED is on. Observe the square wave graph.</li>
+<li>Click on "REFRESH" button to re-executing the experiment.</li>
 </ol>
       </div>
       <div class="modal-footer">
@@ -166,12 +180,12 @@ var config = {
 
 var layout = {
   responsive: true,
-  width: 670,
-  height: 300,
+  width: 600,
+  height: 250,
   title: 'CCPR2 Timer',
   xaxis: {
     range: [0, 10],
-    title: 'Time (mS)'
+    title: 'Time (ms)'
   },
   yaxis: {
     range: [-0.2, 6.4],
@@ -212,12 +226,12 @@ var config = {
 
 var layout = {
   responsive: true,
-  width: 670,
-  height: 300,
+  width: 600,
+  height: 250,
   title: 'CCPR2 Timer',
   xaxis: {
     range: [0, 10],
-    title: 'Time (mS)'
+    title: 'Time (ms)'
   },
   yaxis: {
     range: [-0.2, 6.4],
@@ -246,7 +260,7 @@ var layout = {
     Plotly.relayout('plot', {
       xaxis: {
         range: [time-10, time],
-		title: 'Time (mS)'
+		title: 'Time (ms)'
       }
     });
   }
@@ -278,7 +292,7 @@ start_e =0;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 <script type="text/javascript" src="lib/raphael.js"></script>
 <script type="text/javascript" src="lib/raphael.min.js"></script>
-<scrip src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
@@ -296,17 +310,18 @@ start_e =0;
         'closeButton': true,
         'debug': false,
         'newestOnTop': false,
-        'progressBar': false,
-        'positionClass': 'toast-top-right',
+        'progressBar': true,
+        'positionClass': 'toast-bottom-right',
         'preventDuplicates': false,
         'showDuration': '1000',
         'hideDuration': '1000',
-        'timeOut': '500',
-        'extendedTimeOut': '500',
+        'timeOut': '5000',
+        'extendedTimeOut': '1000',
         'showEasing': 'swing',
         'hideEasing': 'linear',
         'showMethod': 'fadeIn',
         'hideMethod': 'fadeOut',
+        'margin-bottom':'50%'
     }
 </script>
 <script>
