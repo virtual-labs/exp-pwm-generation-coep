@@ -1,0 +1,136 @@
+.selectConf {
+	height: auto;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+.panelHeadingBold {
+	font-size: 21px;
+}
+
+.labelstyle {
+	font-size: 16px;
+	margin: 5px 2px 5px 2px;
+	
+}
+
+#msgBox {
+	/* 	background-color:red; */
+	margin: 20px;
+	font-size: 20px;
+}
+
+.validMaterialMsgStyle {
+	color: #fff;
+	font-size: 19px;
+	padding: 10px;
+}
+
+hr.new3 {
+	border-top: 10px dotted red;
+}
+
+#appliedLoad, #axialCalculation, #transverseCalculation {
+	background-color: #a1aaab;
+	color: #fff;
+	padding: 5px 20px 5px 5px;
+	margin: 5px;
+}
+
+#calVoltage {
+	background-color: #505a5b;
+	color: #fff;
+	padding: 5px 20px 5px 5px;
+	margin: 5px;
+}
+
+
+#labelSelected {
+	background-color: #505a5b;
+	color: #fff;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#testSubmit {
+	padding: 10px;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 10px;
+	background-color: #212529;
+	margin: 20px 10px;;
+	letter-spacing: 1px;
+	font-weight: bold;
+	/* 	box-shadow: 0 5px #999; */
+}
+
+#questionDiv .queno {
+	background-color: #505a5b;
+	padding: 6px 6px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 6px;
+	font-family: Cambria, Georgia, serif;
+	font-weight: 600;
+}
+
+#testSubmit, #nextLevelConfig {
+	padding: 10px;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 10px;
+	background-color: #212529;
+	margin: 20px 10px;;
+	letter-spacing: 1px;
+	font-weight: bold;
+	/* 	box-shadow: 0 5px #999; */
+}
+
+.nextLevelBtn {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #505a5b;
+	color: #fff;
+	margin: 20px 10px;
+	letter-spacing: 1px;
+	font-size: 18px;
+}
+
+.panel-primary>.panel-heading, .card-header, .modal-header {
+	background-color: #505a5b;
+	color: #fff;
+	border-color: #212529;
+}
+.panel-primary{
+	    border-color: #212529;
+}
+.boldTextBlue {
+	color: Blue;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+
+.boldTextRed {
+	color: Red;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+
+.boldTextGreen {
+	color: green;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+
+.model {
+	padding: 0px;
+}
+
+.errorMsgf {
+	
+}
+
+#alertMsgBox {
+	margin-top: 25px;
+}
