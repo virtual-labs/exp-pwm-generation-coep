@@ -58,7 +58,7 @@ var selection ='<div class="row selectConf" >'
 	+ '<div class="col-sm-1">'
 	+ '</div>'
 	+ '<div class="col-sm-5" id="ptimerRow" >'
-	+ '<label class="labelstyle">Select PWM Period value (mS) : </label>'
+	+ '<label class="labelstyle">Select PWM Period value (ms) : </label>'
 	+ '</div>'
 	+ '<div class="col-sm-5">'
 	+ '<select  class="form-control selectConf" id="pVal"  style="height:auto;" disabled >'
@@ -109,19 +109,19 @@ var selection ='<div class="row selectConf" >'
 	
 	+ '<div class="row" selectConf>'
 	+ '<div class="col-sm-3" id="buttonDiv">'
-	+ '<button type="button" class="btn btn-danger btnStyle button button5" id="generateCode" data-toggle="modal" data-target="#myModal" disabled><b>GENERATE CODE</b></button>'
+	+ '<button type="button" class="btn btn-danger btnStyle button button5" id="generateCode" data-toggle="modal" data-target="#myModal" disabled><b>GENERATE<br>CODE</b></button>'
 	+ '</div>'
 	+ '<div class="col-sm-3" id="buttonDiv">'
-	+ '<button type="button" class="btn btn-success btnStyle button button4" id="compileCode" data-toggle="modal" data-target="#myModal" disabled><b>COMPILE</b></button>'
+	+ '<button type="button" class="btn btn-success btnStyle button button4" id="compileCode" data-toggle="modal" data-target="#myModal" disabled><b>COMPILE<br>CODE</b></button>'
 	+ '</div>'
 	+ '<div class="col-sm-3" id="buttonDiv">'
-	+ '<button type="button" class="btn btn-success btnStyle button button4" id="executeCode" data-toggle="modal" data-target="#myModal" disabled><b>EXECUTE</b></button>'
+	+ '<button type="button" class="btn btn-success btnStyle button button4" id="executeCode" data-toggle="modal" data-target="#myModal" disabled><b>EXECUTE<br>CODE</b></button>'
 	+ '</div>'
 //	+ '<div class="col-sm-2" id="buttonDiv">'
 //  +' <button type="button" class="btn btn-info btnStyle button button3" id="refresh" data-toggle="modal"><b>REFRESH</b></button>'
 //	+ '</div>'
 	+ '<div class="col-sm-3" id="buttonDiv">'
-	+ '<button type="button" class="btn btn-primary btnStyle button button2" id="downloadCode" data-toggle="modal" disabled><i class="fa fa-download"></i> <b>DOWNLOAD</b></button>'
+	+ '<button type="button" class="btn btn-primary btnStyle button button2" id="downloadCode" data-toggle="modal" disabled><i class="fa fa-download"></i> <b>DOWNLOAD<br>PROGRAM</b></button>'
 	+ '</div>'
 	+ '</div>'
 	
@@ -183,7 +183,7 @@ var ledTypeVAl;
 		$("body").css("padding","0px 0px 0px 0px");	
 		outputPinVal = $("#outputPinName").val();
 		if(outputPinVal<=0){
-			alert("Select Output Pin.");
+			toastr.warning("Select Output Pin.");
 		}else{
 //			$("#outputPinName").children(":selected").css("background-color","#f7dddd")		  
 		  $("#pVal").prop("disabled",false);			  
@@ -198,7 +198,7 @@ var ledTypeVAl;
 		periodVal = $("#pVal").val();
 		console.log("periodVal ="+periodVal);
 		if(periodVal<=0){
-			alert("Select period (PR2 Value).");
+			toastr.warning("Select period (PR2 Value).");
 		}else{		  
 		  $("#perdentageVal").prop("disabled",false);			  
  		  $("#pVal").prop("disabled",true);
@@ -210,7 +210,7 @@ var ledTypeVAl;
 		$("body").css("padding","0px 0px 0px 0px");	
 		dCycleVal=$("#perdentageVal").val();
 		if(dCycleVal==""){
-			alert("Enter numeric value");
+			toastr.warning("Enter numeric value");
 		}else{
 			dCycleVal=$("#perdentageVal").val();
 			
@@ -218,7 +218,7 @@ var ledTypeVAl;
  		  		$("#ledtype").prop("disabled",false);		  			  
  		  		$("#perdentageVal").prop("disabled",true);
 			}else{
-				alert("Enter the value of duty cycle in the range of 10% to 100%");			
+				toastr.warning("Enter the value of duty cycle in the range of 10% to 100%");			
 			}
 	 }	
 	});
@@ -229,7 +229,7 @@ $("#ledtype").change(function(){
 		ledTypeVAl = $("#ledtype").val(); 
 		if(ledTypeVAl<=0){
 //			$("#modelMsg").html("<b class='boldTextRed'>Select Appropraite Pin.</b>");
-			alert("Select LED Connection Type.");
+			toastr.warning("Select LED Connection Type.");
 		}else{	
 		  $("#generateCode").prop("disabled",false);
 		  $("#compileCode").prop("disabled",false);
@@ -282,35 +282,35 @@ var codeWindow =  '<div class="row  selectConf" id="codeview" hidden >'
 
 $("#generateCode").click(function () {	
 	var Pwer3Val = Math.pow(10,-6);
-console.log("Pwer3Val = "+Pwer3Val);
+//console.log("Pwer3Val = "+Pwer3Val);
 
 var ptimeVal= parseInt(periodVal);
 console.log(ptimeVal);
 var PR2ValTop=ptimeVal*Pwer3Val;
-console.log("PR2ValTop = "+PR2ValTop);
+//console.log("PR2ValTop = "+PR2ValTop);
 
 var Pwer6Val = Math.pow(10,-6);
-console.log("Pwer6Val = "+Pwer6Val);
+//console.log("Pwer6Val = "+Pwer6Val);
 
 var PR2ValBottom=4*0.125*Pwer6Val*16;
-console.log("PR2ValBottom = "+PR2ValBottom);
+//console.log("PR2ValBottom = "+PR2ValBottom);
 
 var PR2Val=PR2ValTop/PR2ValBottom;
-console.log("PR2Val = "+PR2Val);
+//console.log("PR2Val = "+PR2Val);
 
 var PR2ValCorr=PR2Val-1;
 var PR2ValCorrfinal=Math.round(PR2ValCorr);
-console.log("PR2ValCorr = "+PR2ValCorr+" ,PR2ValCorrfinal = "+PR2ValCorrfinal);
+//console.log("PR2ValCorr = "+PR2ValCorr+" ,PR2ValCorrfinal = "+PR2ValCorrfinal);
 
 var dCycleValue5=parseInt(dCycleVal);
-console.log("dCycleValue5="+dCycleValue5);
+//console.log("dCycleValue5="+dCycleValue5);
 
 var calculateDutycycle=dCycleValue5/100;
-console.log("calculateDutycycle="+calculateDutycycle);
+//console.log("calculateDutycycle="+calculateDutycycle);
 
 var codeDutyCval= calculateDutycycle*PR2ValCorrfinal;
 var codeDutyCvalCorr=Math.round(codeDutyCval)  //.toFixed(2);
-console.log("codeDutyCval="+codeDutyCval+", codeDutyCvalCorr= "+codeDutyCvalCorr);
+//console.log("codeDutyCval="+codeDutyCval+", codeDutyCvalCorr= "+codeDutyCvalCorr);
 
 
 	$("#modelMsg").html("<b class='boldTextGreen'>Code Generated Successfully.</b>");
@@ -389,7 +389,7 @@ $("#executeCode").click(function () {
 			ledSelect= $("#ledtype").val();
 			$("#canvas-div").html('');
 			$("#canvas-div1").html('');
-			$("#plot").prop("hidden",false);
+//			$("#plot").prop("hidden",false);
 			mimic(pValSelect,dValSelect,ledSelect);
     
 	}else{
@@ -419,7 +419,7 @@ $("#downloadCode").click(function () {
 //			$("#modelMsg").html("<b class='boldTextGreen'>Download Code File Successfully.</b>");	
 	}else{
 //		$("#modelMsg").html("<b class='boldTextGreen'>Please Generate The Code First and Then You Can Download Code File.</b>");
-		alert("Please Generate The Code First and Then You Can Download Code File.")
+		toastr.warning("Please Generate The Code to Download Code File.")
 	}
 
  

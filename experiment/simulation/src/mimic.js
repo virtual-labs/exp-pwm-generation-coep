@@ -127,14 +127,12 @@ var ground= paper.image("images/ground.png",x+300,y+266,50, 21);
 var groundConnection=paper.path("M"+(x+262)+" "+(y+158)+"l 64 0 l 0 112   ").attr({'stroke-width':3});
 
 resetimg.click(function(){
-	$("#canvas-div").html('');
-//	$("#plot").html("");
-		$("#graphDiv").prop("hidden",false);
-		reset();
+//	$("#canvas-div").html('');
+	$("#plot").html("");
+	$("#graphDiv").prop("hidden",true);
+	reset();
 	paper.clear();
-
-	mimic(pValSelect,dValSelect,ledSelect)
-	
+	mimic(pValSelect,dValSelect,ledSelect)	
 })
 
 
@@ -145,7 +143,7 @@ cathode.click(function(){
 //	console.log("cathodFlag"+cathodFlag);
 	var cathode_connection_arr=[];	
 	if(verifyRcircleConnect==true){
-		alert("Already Connected.");
+		toastr.info("Already Connected.");
 	}else{
 		if (diodSelection==0){
 		if(RcircleFlag==1){	
@@ -187,7 +185,7 @@ Rcircle.click(function(){
 	var cathode_connection_arr=[];	
 
 	if( crossCheckConnect==true){
-		alert("Already Connected.");
+		toastr.info("Already Connected.");
 	}else{
 		if (diodSelection==0){
 			if(cathodFlag==1){	
@@ -229,7 +227,7 @@ terminalRC2.click(function(){
 	inputCheckFlag3=1;
 	var StoT_connection_arr2=[];
 	if(verifyAconnect==true){
-		alert("Already Connected.");
+		toastr.info("Already Connected.");
 	}else{
 		if(anodeflg==1){ 
 					StoT_connection_arr2[0]=paper.path("M "+(x+168)+" "+(y-15)+ "l 0 0").attr({'stroke-width':3});			
@@ -256,7 +254,7 @@ anode.click(function(){
 	anodeClick=true;
 	var anode_connection_arr=[];
 if(verifyRC2Connection	==true){
-		alert("Already Connected.");
+		toastr.info("Already Connected.");
 }else{
 	if(c2Flag==1){
 			anode_connection_arr[0]=paper.path("M "+(x+190.1)+" "+(y+58)+ "l 0 0").attr({'stroke-width':3});			
@@ -279,35 +277,51 @@ if(verifyRC2Connection	==true){
 })
 
 var statusFlag=false;
-checkStatus.click(function(){
-	
-//	console.log("anodeflg"+anodeflg+", pinval="+pinVal+ ",pinname :" + pinName+", RcircleFlag="+RcircleFlag+", cathodFlag="+cathodFlag);
-	if(anodeflg==1 && pinVal==inputpinName && RcircleFlag==1 && cathodFlag==1){
-		statusFlag=true;
-//		$("#plot").html("");
-//		$("#plot").prop("hidden",false);
-//		start();
-		alert("Connection Established Successfully. Now Click on Run Button.");
-		
-	}else if(RcircleFlag==0 && cathodFlag==0){
-		alert("First Establish Cathode Connection.")
-	}else if(anodeflg!=1 && pinVal!=pinName){
-		alert("Connect the pin.")
+var statusFlagValue=0; 
+var checkStatusClickVal=0;
+checkStatus.click(function(){	
+	checkStatusClickVal=1;
+	if(runingFlagValue==1){
+					toastr.info("Connection status has already been checked.");
 	}else{
-		alert("Wrong Connection. Please Try Again.");
+	//	console.log("anodeflg"+anodeflg+", pinval="+pinVal+ ",pinname :" + pinName+", RcircleFlag="+RcircleFlag+", cathodFlag="+cathodFlag);
+		if(anodeflg==1 && pinVal==inputpinName && RcircleFlag==1 && cathodFlag==1){
+			statusFlag=true;
+			statusFlagValue=1;
+	//		$("#plot").html("");
+	//		$("#plot").prop("hidden",false);
+	//		start();
+			toastr.success("Connection Established Successfully. Now Click on Run Button.");		
+		}else if(RcircleFlag==0 && cathodFlag==0){
+			toastr.warning("Establish Cathode Connection.");
+		}else if(anodeflg!=1 && pinVal!=pinName){
+			toastr.warning("Connect the pin.")
+		}else{
+			toastr.error("Wrong Connection. Please Try Again.");
+		}
 	}
 });
 
+var runingFlagValue=0;
 runimg.click(function(){
-	if(statusFlag==true){
-//		setInterval(toggleVisibility, timeVal*2);
-//		$("#plot").html("");
-		$("#graphDiv").prop("hidden",false);
-		start(interval_plot1,offTime1,onTime1);
-//		start();
-		
+	if(statusFlagValue==1){
+		statusFlagValue=0;
+		if(statusFlag==true){
+			runingFlagValue=1;
+			statusFlag=false;
+	//		setInterval(toggleVisibility, timeVal*2);
+	//		$("#plot").html("");
+//			$("#graphDiv").prop("hidden",false);
+			$("#plot").prop("hidden",false);
+			start(interval_plot1,offTime1,onTime1);
+	//		start();		
+		}else{
+			toastr.warning("Please check the connection status.");
+		}
+	}else if(checkStatusClickVal!=1){
+		toastr.warning("Please check the connection status.");	//You have already run the circuit.
 	}else{
-		alert("Please Check Connection Status.");
+		toastr.info("You have already clicked the Run button.");	//You have already run the circuit.
 	}
 });
 
