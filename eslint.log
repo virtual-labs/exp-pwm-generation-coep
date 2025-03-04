@@ -1,0 +1,397 @@
+
+/home/runner/work/exp-pwm-generation-coep/exp-pwm-generation-coep/experiment/simulation/lib/jquery.js
+  2:58     warning  'module' is not defined                                                    no-undef
+  2:73     warning  'module' is not defined                                                    no-undef
+  2:6324   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6580   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:7011   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:7270   warning  Empty block statement                                                      no-empty
+  2:7839   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9709   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11311  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11887  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11925  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12343  warning  Empty block statement                                                      no-empty
+  2:12906  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:13218  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15046  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15317  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15517  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15893  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  2:16598  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:18982  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19073  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19133  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:20435  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21049  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21160  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:23420  warning  Unnecessary escape character: \[                                           no-useless-escape
+  2:23422  warning  Unnecessary escape character: \.                                           no-useless-escape
+  2:30761  warning  Empty block statement                                                      no-empty
+  2:31981  warning  Empty block statement                                                      no-empty
+  3:7811   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  3:7951   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  3:8441   warning  Empty block statement                                                      no-empty
+  3:11852  warning  Empty block statement                                                      no-empty
+  3:14493  warning  Empty block statement                                                      no-empty
+  3:24051  warning  Empty block statement                                                      no-empty
+  3:26100  warning  Move function declaration to function body root                            no-inner-declarations
+  3:30714  warning  Empty block statement                                                      no-empty
+  4:2546   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:5062   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:11701  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:13447  warning  Empty block statement                                                      no-empty
+  4:14747  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:14827  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:15164  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:15244  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:15659  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:15915  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:16492  warning  Unnecessary escape character: \/                                           no-useless-escape
+  4:17365  warning  Unnecessary escape character: \/                                           no-useless-escape
+  4:17377  warning  Unnecessary escape character: \/                                           no-useless-escape
+  4:17610  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:20109  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:22009  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  4:27128  warning  Empty block statement                                                      no-empty
+  4:27205  warning  Empty block statement                                                      no-empty
+  5:812    warning  'define' is not defined                                                    no-undef
+  5:824    warning  'define' is not defined                                                    no-undef
+
+/home/runner/work/exp-pwm-generation-coep/exp-pwm-generation-coep/experiment/simulation/lib/jquery.min.js
+  2:71     warning  'module' is not defined                                                    no-undef
+  2:86     warning  'module' is not defined                                                    no-undef
+  2:5433   warning  Unexpected control character(s) in regular expression: \x1f, \x1f          no-control-regex
+  2:5916   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6170   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6614   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:7404   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9497   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9807   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11608  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12183  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12221  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:13234  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:13546  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15374  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15645  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15843  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:16217  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  2:16907  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:18727  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:18827  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:18887  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19071  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:20240  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21514  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21625  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:23791  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:33395  warning  Empty block statement                                                      no-empty
+  2:37269  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:38490  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:38606  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:39234  warning  Empty block statement                                                      no-empty
+  2:46727  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:49033  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:50593  warning  Empty block statement                                                      no-empty
+  2:58406  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:59575  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:65215  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66958  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:67024  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:67328  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:67394  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:67801  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:68078  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:73449  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:75043  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:75823  warning  'r.href' is assigned to itself                                             no-self-assign
+  2:80414  warning  Empty block statement                                                      no-empty
+  2:83525  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:87869  warning  'define' is not defined                                                    no-undef
+  2:87881  warning  'define' is not defined                                                    no-undef
+
+/home/runner/work/exp-pwm-generation-coep/exp-pwm-generation-coep/experiment/simulation/lib/raphael.js
+  5800:60  error  Parsing error: Deleting local variable in strict mode
+
+/home/runner/work/exp-pwm-generation-coep/exp-pwm-generation-coep/experiment/simulation/lib/raphael.min.js
+  1:66     warning  'module' is not defined                                                                                                                          no-undef
+  1:112    warning  'define' is not defined                                                                                                                          no-undef
+  1:123    warning  'define' is not defined                                                                                                                          no-undef
+  1:161    warning  'exports' is not defined                                                                                                                         no-undef
+  1:1566   warning  'DocumentTouch' is not defined                                                                                                                   no-undef
+  1:2001   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2017   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2033   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2052   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2081   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2110   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2126   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2145   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2174   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2203   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2219   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2238   warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:2346   warning  Unnecessary escape character: \)                                                                                                                 no-useless-escape
+  1:3257   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d                                no-control-regex
+  1:3582   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d  no-control-regex
+  1:3756   warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:4055   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d  no-control-regex
+  1:4222   warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:4521   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d                                no-control-regex
+  1:4539   warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:4856   warning  Unexpected control character(s) in regular expression: \x09, \x0a, \x0b, \x0c, \x0d, \x09, \x0a, \x0b, \x0c, \x0d                                no-control-regex
+  1:5154   warning  Unnecessary escape character: \)                                                                                                                 no-useless-escape
+  1:7857   warning  'ActiveXObject' is not defined                                                                                                                   no-undef
+  1:7931   warning  'createPopup' is not defined                                                                                                                     no-undef
+  1:19015  warning  Expected a 'break' statement before 'default'                                                                                                    no-fallthrough
+  1:20113  warning  Expected a 'break' statement before 'default'                                                                                                    no-fallthrough
+  1:20421  warning  Expected a 'break' statement before 'default'                                                                                                    no-fallthrough
+  1:24342  warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:35757  warning  't' is defined but never used                                                                                                                    no-unused-vars
+  1:49075  warning  'r' is defined but never used                                                                                                                    no-unused-vars
+  1:50549  warning  'i' is defined but never used                                                                                                                    no-unused-vars
+  1:50598  warning  'r' is defined but never used                                                                                                                    no-unused-vars
+  1:52666  warning  Unnecessary escape character: \}                                                                                                                 no-useless-escape
+  1:53074  warning  Empty block statement                                                                                                                            no-empty
+  1:53754  warning  Unnecessary escape character: \)                                                                                                                 no-useless-escape
+  1:60967  warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:72245  warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:72515  warning  Unnecessary escape character: \(                                                                                                                 no-useless-escape
+  1:72517  warning  Unnecessary escape character: \)                                                                                                                 no-useless-escape
+  1:75570  warning  Expected a conditional expression and instead saw an assignment                                                                                  no-cond-assign
+  1:77369  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77405  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77447  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77582  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77619  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:77661  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:79325  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:79783  warning  Expected a 'break' statement before 'case'                                                                                                       no-fallthrough
+  1:79973  warning  Expected a 'break' statement before 'default'                                                                                                    no-fallthrough
+  1:80032  warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:89485  warning  'r' is defined but never used                                                                                                                    no-unused-vars
+  1:89543  warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:89545  warning  Unnecessary escape character: \/                                                                                                                 no-useless-escape
+  1:90733  warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:90735  warning  Unnecessary escape character: \^                                                                                                                 no-useless-escape
+  1:90739  warning  Unnecessary escape character: \[                                                                                                                 no-useless-escape
+  1:90741  warning  Unnecessary escape character: \-                                                                                                                 no-useless-escape
+  1:90780  warning  Unnecessary escape character: \.                                                                                                                 no-useless-escape
+  1:90782  warning  Unnecessary escape character: \/                                                                                                                 no-useless-escape
+  1:91000  warning  Do not access Object.prototype method 'hasOwnProperty' from target object                                                                        no-prototype-builtins
+
+/home/runner/work/exp-pwm-generation-coep/exp-pwm-generation-coep/experiment/simulation/src/configuration.js
+    3:2   warning  '$' is not defined                               no-undef
+    4:6   warning  '$' is not defined                               no-undef
+    6:7   warning  '$' is not defined                               no-undef
+    7:7   warning  '$' is not defined                               no-undef
+  162:2   warning  '$' is not defined                               no-undef
+  167:5   warning  'oPinSelect' is defined but never used           no-unused-vars
+  170:5   warning  'sValSelect' is defined but never used           no-unused-vars
+  174:5   warning  'id' is assigned a value but never used          no-unused-vars
+  178:5   warning  'switchVal' is defined but never used            no-unused-vars
+  182:2   warning  '$' is not defined                               no-undef
+  183:3   warning  '$' is not defined                               no-undef
+  184:18  warning  '$' is not defined                               no-undef
+  186:4   warning  'toastr' is not defined                          no-undef
+  189:2   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  189:5   warning  '$' is not defined                               no-undef
+  190:1   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  190:6   warning  '$' is not defined                               no-undef
+  196:2   warning  '$' is not defined                               no-undef
+  197:3   warning  '$' is not defined                               no-undef
+  198:15  warning  '$' is not defined                               no-undef
+  201:4   warning  'toastr' is not defined                          no-undef
+  203:2   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  203:5   warning  '$' is not defined                               no-undef
+  204:1   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  204:6   warning  '$' is not defined                               no-undef
+  209:2   warning  '$' is not defined                               no-undef
+  210:3   warning  '$' is not defined                               no-undef
+  211:13  warning  '$' is not defined                               no-undef
+  213:4   warning  'toastr' is not defined                          no-undef
+  215:14  warning  '$' is not defined                               no-undef
+  217:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  218:1   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  218:8   warning  '$' is not defined                               no-undef
+  219:1   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  219:8   warning  '$' is not defined                               no-undef
+  221:5   warning  'toastr' is not defined                          no-undef
+  223:1   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  227:1   warning  '$' is not defined                               no-undef
+  228:2   warning  '$' is not defined                               no-undef
+  229:16  warning  '$' is not defined                               no-undef
+  232:4   warning  'toastr' is not defined                          no-undef
+  234:2   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  234:5   warning  '$' is not defined                               no-undef
+  235:2   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  235:5   warning  '$' is not defined                               no-undef
+  236:2   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  236:5   warning  '$' is not defined                               no-undef
+  237:2   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  237:5   warning  '$' is not defined                               no-undef
+  238:2   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  238:5   warning  '$' is not defined                               no-undef
+  245:5   warning  'codeWindow' is assigned a value but never used  no-unused-vars
+  246:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  247:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  248:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  249:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  250:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  251:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  252:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  253:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  254:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  255:3   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  283:1   warning  '$' is not defined                               no-undef
+  316:2   warning  '$' is not defined                               no-undef
+  319:2   warning  '$' is not defined                               no-undef
+  328:2   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  358:1   warning  '$' is not defined                               no-undef
+  360:1   warning  '$' is not defined                               no-undef
+  362:1   warning  '$' is not defined                               no-undef
+  370:1   warning  '$' is not defined                               no-undef
+  374:3   warning  '$' is not defined                               no-undef
+  376:3   warning  '$' is not defined                               no-undef
+  378:3   warning  '$' is not defined                               no-undef
+  383:1   warning  '$' is not defined                               no-undef
+  385:3   warning  '$' is not defined                               no-undef
+  387:16  warning  '$' is not defined                               no-undef
+  388:16  warning  '$' is not defined                               no-undef
+  389:15  warning  '$' is not defined                               no-undef
+  390:4   warning  '$' is not defined                               no-undef
+  391:4   warning  '$' is not defined                               no-undef
+  393:4   warning  'mimic' is not defined                           no-undef
+  397:3   warning  '$' is not defined                               no-undef
+  404:17  warning  'jsPDF' is not defined                           no-undef
+  406:26  warning  'element' is defined but never used              no-unused-vars
+  406:35  warning  'renderer' is defined but never used             no-unused-vars
+  412:1   warning  '$' is not defined                               no-undef
+  413:1   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  414:17  warning  '$' is not defined                               no-undef
+  415:8   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  417:4   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  418:4   warning  Mixed spaces and tabs                            no-mixed-spaces-and-tabs
+  422:3   warning  'toastr' is not defined                          no-undef
+
+/home/runner/work/exp-pwm-generation-coep/exp-pwm-generation-coep/experiment/simulation/src/mimic.js
+    3:1   warning  '$' is not defined                                     no-undef
+    4:2   warning  '$' is not defined                                     no-undef
+    8:14  warning  '$' is not defined                                     no-undef
+   10:6   warning  '$' is not defined                                     no-undef
+   11:3   warning  'width' is assigned a value but never used             no-unused-vars
+   11:11  warning  '$' is not defined                                     no-undef
+   12:3   warning  'paper' is not defined                                 no-undef
+   12:15  warning  'Raphael' is not defined                               no-undef
+   13:3   warning  'paper' is not defined                                 no-undef
+   14:3   warning  'paper' is not defined                                 no-undef
+   16:3   warning  'paper' is not defined                                 no-undef
+   16:15  warning  'Raphael' is not defined                               no-undef
+   17:3   warning  'paper' is not defined                                 no-undef
+   18:3   warning  'paper' is not defined                                 no-undef
+   21:5   warning  'x' is assigned a value but never used                 no-unused-vars
+   22:5   warning  'y' is assigned a value but never used                 no-unused-vars
+   27:10  warning  'mimic' is defined but never used                      no-unused-vars
+   29:5   warning  '$' is not defined                                     no-undef
+   31:4   warning  Mixed spaces and tabs                                  no-mixed-spaces-and-tabs
+   33:5   warning  '$' is not defined                                     no-undef
+   34:5   warning  '$' is not defined                                     no-undef
+   35:5   warning  '$' is not defined                                     no-undef
+   36:2   warning  '$' is not defined                                     no-undef
+   40:14  warning  '$' is not defined                                     no-undef
+   42:6   warning  '$' is not defined                                     no-undef
+   43:3   warning  'width' is assigned a value but never used             no-unused-vars
+   43:11  warning  '$' is not defined                                     no-undef
+   44:3   warning  'paper' is not defined                                 no-undef
+   44:15  warning  'Raphael' is not defined                               no-undef
+   45:3   warning  'paper' is not defined                                 no-undef
+   46:3   warning  'paper' is not defined                                 no-undef
+   48:3   warning  'paper' is not defined                                 no-undef
+   48:15  warning  'Raphael' is not defined                               no-undef
+   49:3   warning  'paper' is not defined                                 no-undef
+   50:3   warning  'paper' is not defined                                 no-undef
+   70:5   warning  'addpercent' is assigned a value but never used        no-unused-vars
+   74:5   warning  'calculate2Ans' is assigned a value but never used     no-unused-vars
+   82:5   warning  'onTime11' is assigned a value but never used          no-unused-vars
+   84:17  warning  'paper' is not defined                                 no-undef
+   85:14  warning  'paper' is not defined                                 no-undef
+   86:12  warning  'paper' is not defined                                 no-undef
+   87:5   warning  'microcontroller' is assigned a value but never used   no-unused-vars
+   87:21  warning  'paper' is not defined                                 no-undef
+   89:5   warning  'Ledcircle' is assigned a value but never used         no-unused-vars
+   89:15  warning  'paper' is not defined                                 no-undef
+   99:8   warning  'paper' is not defined                                 no-undef
+  100:8   warning  'paper' is not defined                                 no-undef
+  101:10  warning  'paper' is not defined                                 no-undef
+  103:2   warning  'diode' is assigned a value but never used             no-unused-vars
+  103:8   warning  'paper' is not defined                                 no-undef
+  104:8   warning  'paper' is not defined                                 no-undef
+  105:10  warning  'paper' is not defined                                 no-undef
+  110:5   warning  'r' is assigned a value but never used                 no-unused-vars
+  110:7   warning  'paper' is not defined                                 no-undef
+  111:5   warning  'connection_RtoG' is assigned a value but never used   no-unused-vars
+  111:21  warning  'paper' is not defined                                 no-undef
+  112:13  warning  'paper' is not defined                                 no-undef
+  114:13  warning  'paper' is not defined                                 no-undef
+  118:17  warning  'paper' is not defined                                 no-undef
+  120:5   warning  'vssCircle' is assigned a value but never used         no-unused-vars
+  120:15  warning  'paper' is not defined                                 no-undef
+  122:5   warning  'vddCircle' is assigned a value but never used         no-unused-vars
+  122:15  warning  'paper' is not defined                                 no-undef
+  123:5   warning  'vdd' is assigned a value but never used               no-unused-vars
+  123:10  warning  'paper' is not defined                                 no-undef
+  124:5   warning  'vddConnection' is assigned a value but never used     no-unused-vars
+  124:19  warning  'paper' is not defined                                 no-undef
+  126:5   warning  'ground' is already defined                            no-redeclare
+  126:5   warning  'ground' is assigned a value but never used            no-unused-vars
+  126:13  warning  'paper' is not defined                                 no-undef
+  127:5   warning  'groundConnection' is assigned a value but never used  no-unused-vars
+  127:22  warning  'paper' is not defined                                 no-undef
+  132:2   warning  '$' is not defined                                     no-undef
+  135:2   warning  'paper' is not defined                                 no-undef
+  137:2   warning  'reset' is not defined                                 no-undef
+  138:2   warning  '$' is not defined                                     no-undef
+  149:3   warning  'toastr' is not defined                                no-undef
+  154:30  warning  'paper' is not defined                                 no-undef
+  157:30  warning  'paper' is not defined                                 no-undef
+  160:30  warning  'paper' is not defined                                 no-undef
+  163:30  warning  'paper' is not defined                                 no-undef
+  173:30  warning  'paper' is not defined                                 no-undef
+  191:3   warning  'toastr' is not defined                                no-undef
+  196:31  warning  'paper' is not defined                                 no-undef
+  199:31  warning  'paper' is not defined                                 no-undef
+  202:31  warning  'paper' is not defined                                 no-undef
+  205:31  warning  'paper' is not defined                                 no-undef
+  216:31  warning  'paper' is not defined                                 no-undef
+  230:2   warning  'inputCheckFlag3' is not defined                       no-undef
+  233:3   warning  'toastr' is not defined                                no-undef
+  236:30  warning  'paper' is not defined                                 no-undef
+  239:30  warning  'paper' is not defined                                 no-undef
+  242:30  warning  'paper' is not defined                                 no-undef
+  257:2   warning  'anodeClick' is not defined                            no-undef
+  260:3   warning  'toastr' is not defined                                no-undef
+  263:28  warning  'paper' is not defined                                 no-undef
+  266:28  warning  'paper' is not defined                                 no-undef
+  269:28  warning  'paper' is not defined                                 no-undef
+  288:6   warning  'toastr' is not defined                                no-undef
+  297:4   warning  'toastr' is not defined                                no-undef
+  299:4   warning  'toastr' is not defined                                no-undef
+  300:35  warning  'pinName' is not defined                               no-undef
+  301:4   warning  'toastr' is not defined                                no-undef
+  303:4   warning  'toastr' is not defined                                no-undef
+  318:4   warning  '$' is not defined                                     no-undef
+  319:4   warning  'start' is not defined                                 no-undef
+  322:4   warning  'toastr' is not defined                                no-undef
+  325:3   warning  'toastr' is not defined                                no-undef
+  327:3   warning  'toastr' is not defined                                no-undef
+
+/home/runner/work/exp-pwm-generation-coep/exp-pwm-generation-coep/experiment/simulation/src/toastr.min.js
+  6:5072  warning  'define' is not defined   no-undef
+  6:5083  warning  'define' is not defined   no-undef
+  6:5132  warning  'module' is not defined   no-undef
+  6:5147  warning  'module' is not defined   no-undef
+  6:5164  warning  'require' is not defined  no-undef
+
+✖ 380 problems (1 error, 379 warnings)
+
