@@ -127,12 +127,15 @@ var ground= paper.image("images/ground.png",x+300,y+266,50, 21);
 var groundConnection=paper.path("M"+(x+262)+" "+(y+158)+"l 64 0 l 0 112   ").attr({'stroke-width':3});
 
 resetimg.click(function(){
+	
 //	$("#canvas-div").html('');
 	$("#plot").html("");
-	$("#graphDiv").prop("hidden",true);
-	reset();
+	
+	//reset();
 	paper.clear();
-	mimic(pValSelect,dValSelect,ledSelect)	
+	mimic(pValSelect,dValSelect,ledSelect)	;
+	reset();
+	$("#graphDiv").prop("hidden",true);
 })
 
 

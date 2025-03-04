@@ -2,7 +2,14 @@
 
 ##### 1. PWM Technique
 
-##### 2. CCP Module of PIC uC 
+Pulse Width Modulation (PWM) is a technique used to control the power delivered to electrical devices by varying the duty cycle of a signal. It works by switching a signal between high and low states at a constant frequency, where the proportion of time the signal remains high (the duty cycle) determines the effective output power. A higher duty cycle means more power is delivered, while a lower duty cycle reduces power. PWM is widely used in motor speed control, LED dimming, and power regulation in electronic circuits due to its efficiency and precision.
+
+![image](images/square_wave.PNG)
+
+Fig: PWM output with 50% duty cycle
+
+
+##### 2. CCP Module of PIC18xx series microcontroller
 
   Depending upon the device selected there are 1 – 4 CCP (Capture/Compare/PWM) modules in PIC micro controller. Each module contains a 16-bit register, which can operate as a 16-bit Capture register, a 16-bit Compare register or a PWM Master/Slave Duty Cycle register. Each Capture/Compare/PWM module is associated with a control register (generically, CCPxCON) and a data register (CCPRx). The data register, in turn, is comprised of two 8-bit registers: CCPRxL (low byte) and CCPRxH (high byte). All registers are both readable and writable. The CCP modules utilize Timers 1, 2 or 3, depending on the mode selected. Timer1 and Timer3 are available to modules in Capture or Compare modes, while Timer2 is available for modules in PWM mode.
   <br/> The pin assignment for CCP2 (Capture input, Compare and PWM output) can change, based on device configuration. The CCP2MX Configuration bit determines which pin CCP2 is multiplexed to. By default, it is assigned to RC1 (CCP2MX = 1). If the Configuration bit is cleared, CCP2 is multiplexed with RB3. Changing the pin assignment of CCP2 does not automatically change any requirements for configuring the port pin. Users must always verify that the appropriate TRIS register is configured correctly for CCP2 operation, regardless of where it is located.
